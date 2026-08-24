@@ -1,0 +1,54 @@
+/* CSS DOCUMENT */
+@charset "utf-8";
+
+@font-face {
+    font-family: Forma DJR Deck Regular; 
+    src: url(fonts/FormaDJRDeck-Regular-Testing.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Forma DJR Deck Bold;
+    src: url(fonts/FormaDJRDisplay-Bold-Testing.otf) format(opentype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Forma DJR Deck Italic;
+    src: url(fonts/FormaDJRDeck-Italic-Testing.otf) format(opentype);
+    font-weight: italic;
+    font-style: normal;
+}
+
+.botonera {
+    width: 1920px;
+    height: 20px;
+    background-color: white;
+    font-family: 'Forma DJR Deck Regular', Arial, sans-serif;
+}
+
+.botones-principales {
+    text-decoration: none;
+    background: white;
+    color: #1466C2;
+    padding: 15px 35px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+
+}
+
+main {
+    background-color: #1466C2;
+    color: white;
+    font-family: 'Forma DJR Deck Regular', Arial, sans-serif;;
+}
+
+footer {
+    background-color: white;
+    color: #1466C2;
+    font-family: 'Forma DJR Deck Regular', Arial, sans-serif;
+}
