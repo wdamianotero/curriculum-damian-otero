@@ -1,19 +1,49 @@
 boceto cv web
 
 ENCABEZADO (header)
-- foto (img)
+- favicon (img)
 - lista de navegación (nav)
 -- sobre mi (a)
+-- proyectos destacados (a)
 -- experiencias (a)
--- educación (a)
--- conocimientos (a)
--- herramientas IA (a)
+-- herramientas (a)
+-- formación (a)
+-- cómo trabajo (a)
+-- contacto (a)
 
 CONTENIDO (main)
-Sobre mi (h1)
-¡Hola! Mi nombre es Damián. Soy Diseñador gráfico con 15 años de experiencia en comunicación visual, branding, diseño editorial y producción gráfica.
-Especializado en el desarrollo de identidades visuales, materiales institucionales, contenido para redes sociales e impresos para organizaciones, empresas y proyectos educativos.
-Manejo integral del proceso de diseño, desde el concepto hasta la producción final, incorporando herramientas de IA para optimizar flujos de trabajo y mantener la consistencia de marca.(p)
+
+Foto en grande mía (img)
+DAMIÁN OTERO - Diseñador Gráfico (h1)
+15 años creando identidades, comunicación visual y piezas gráficas desde el concepto hasta la producción final.(p)
+link a Behance (ul)
+link a descargar cv (ul)
+
+Diseño con una mirada integral (h2)
+Soy Diseñador Gráfico con 15 años de experiencia en comunicación visual, branding, diseño editorial y producción gráfica. Me especializo en desarrollar identidades visuales, materiales institucionales, contenido para redes sociales y piezas impresas para organizaciones, empresas y proyectos educativos.
+Mi experiencia abarca todo el proceso de diseño, desde el concepto y desarrollo visual hasta la producción final, combinando criterio creativo con conocimiento técnico y herramientas de IA para optimizar procesos y mantener la consistencia de marca.(p)
+
+15+ años de experiencia (ul)
+100+ proyectos desarrollados (ul)
+200+ publicaciones e informes (ul)
+20+ identidades visuales (ul)
+
+PROYECTOS DESTACADOS
+imagen proyecto 1 (img)
+Descripción breve (p)
+Link behance (link)
+
+imagen proyecto 2 (img)
+Descripción breve (p)
+Link behance (link)
+
+imagen proyecto 3 (img)
+Descripción breve (p)
+Link behance (link)
+
+imagen proyecto 4 (img)
+Descripción breve (p)
+Link behance (link)
 
 Experiencia (h2)
 EDUCACIÓN PARA COMPARTIR | DISEÑADOR GRÁFICO | CDMX - MÉXICO | 04/2022 - 06/2026 (h3)
@@ -45,35 +75,29 @@ Diseñé piezas publicitarias para medios editoriales.
 Revisé materiales editoriales para asegurar la calidad visual y la correcta aplicación de la identidad gráfica.
 Colaboré con el equipo editorial y comercial en la producción de publicaciones impresas.
 
-Educación
+Formación (2)
 UNIVERSIDAD NACIONAL DE LANÚS | 3º año — En curso
 Licenciatura en Diseño y Comunicación Visual
 
 INSTITUTO MARÍA ANA MOGAS | 2009 — Graduado
 Bachiller en Comunicación, Arte y Diseño
 
-Conocimientos
-Adobe After Effects · Motion Graphics
-Adobe Illustrator
-Adobe Creative Cloud
-Adobe InDesign
-Adobe Lightroom
-Adobe Photoshop
-Adobe Premiere Pro · Edición de videos
-Canva
-CapCut
-CorelDRAW
-Figma · Diseño de interfaces
-WordPress
-Inglés intermedio
+Herramientas (h2)
 
-Herramientas IA
-ChatGPT
-Adobe Firefly
-Gemini
-Claude
+Adobe (h3)
+Illustrator · Photoshop · InDesign · After Effects · Premiere Pro · Lightroom
+
+Digital (h3)
+Canva · CapCut · WordPress · Figma · CorelDRAW
+
+IA (h3)
+ChatGPT · Firefly · Gemini · Claude
+
+Inglés (h3)
+Nivel intermedio
 
 PIE DE PÁGINA (footer)
+¡Trabajemos juntos! (h2)
 - link a whatsapp (p)
 - mail (p)
 - RRSS (Behance y LinkedIn)

@@ -2,53 +2,155 @@
 @charset "utf-8";
 
 @font-face {
-    font-family: Forma DJR Deck Regular; 
-    src: url(fonts/FormaDJRDeck-Regular-Testing.otf) format(opentype);
+    font-family: Montserrat Regular;
+    src: url(fonts/Montserrat-Regular.ttf) format(opentype);
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: Forma DJR Deck Bold;
-    src: url(fonts/FormaDJRDisplay-Bold-Testing.otf) format(opentype);
+    font-family: Montserrat Bold;
+    src: url(fonts/Montserrat-Bold.ttf) format(opentype);
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: Forma DJR Deck Italic;
-    src: url(fonts/FormaDJRDeck-Italic-Testing.otf) format(opentype);
+    font-family: Monterrat Italic;
+    src: url(fonts/Montserrat-Italic.ttf) format(opentype);
     font-weight: italic;
     font-style: normal;
 }
 
-.botonera {
-    width: 1920px;
-    height: 20px;
-    background-color: white;
-    font-family: 'Forma DJR Deck Regular', Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.botones-principales {
-    text-decoration: none;
+.header-container {
+    height: auto;
+    width: 100%;
     background: white;
+    font-size: 1em;
+    font-family: 'Montserrat Regular', Arial, sans-serif;
+}
+
+.header-container .botonera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+}
+
+.header-container .botonera .logo-landing img {
+    width: 8em;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.header-container .botonera ul {
+    display: flex;
+}
+
+.header-container .botonera ul li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.header-container .botonera ul li a {
     color: #1466C2;
-    padding: 15px 35px;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+    position: relative;
+}
+
+.header-container .botonera ul li a::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0.5px;
+    background: #1466C2;
+    transition: widht 0.3s ease-in-out;
+}
+
+.header-container .botonera ul li a:hover::after {
+    width: 100%;
+}
+
+.header-container .botonera button {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family:'Montserrat Bold', Arial, sans-serif;
+    color: white;
+    background: #1466C2;
+    border: #1466C2 1px solid;
+    border-radius: 30px;
+    transition: all 0.3s; 
+}
+
+.header-container .botonera button:hover {
+    background: white;
+    border: #1466C2 1px solid;
+    color:#1466C2;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1{
+    font-size: 45px;
+    font-weight: 700;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+}
+
+.hero-content h2 {
+        font-size: 30px;
+    font-weight: 700;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+}
+
+.hero-content .hero-botones {
+display: flex;
+justify-content: space-between;
+width: 345px;
+height: 50px;
+background: white;
+}
+
+.hero-botones a {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    width: 250px;
+    height: 100%;
+    background: white;
+    border: 2px solid #1466C2;
+    border-radius: 50px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 600px;
+    letter-spacing: 1px;
 
 }
 
 main {
     background-color: #1466C2;
     color: white;
-    font-family: 'Forma DJR Deck Regular', Arial, sans-serif;;
+    font-family: 'Montserrat Regular', Arial, sans-serif;
 }
 
 footer {
     background-color: white;
     color: #1466C2;
-    font-family: 'Forma DJR Deck Regular', Arial, sans-serif;
+    font-family: 'Montserrat Regular', Arial, sans-serif;
 }
