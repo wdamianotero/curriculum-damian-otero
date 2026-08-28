@@ -66,7 +66,7 @@
 
 .header-container .botonera ul li a::after {
     position: absolute;
-    content: "";
+    content: '';
     left: 0;
     bottom: 0;
     width: 0;
@@ -82,22 +82,25 @@
 .header-container .botonera button {
     cursor: pointer;
     padding: 10px 20px;
-    font-family:'Montserrat Bold', Arial, sans-serif;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
     color: white;
     background: #1466C2;
     border: #1466C2 1px solid;
     border-radius: 30px;
-    transition: all 0.3s; 
+    transition: all 0.3s;
 }
 
 .header-container .botonera button:hover {
     background: white;
     border: #1466C2 1px solid;
-    color:#1466C2;
+    color: #1466C2;
 }
 
 .hero {
     height: 100vh;
+    background: url('img/hero-fondo.png') no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -107,40 +110,49 @@
     max-width: 600px;
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size: 45px;
     font-weight: 700;
     font-family: 'Montserrat Bold', Arial, sans-serif;
+    line-height: 1.2;
 }
 
 .hero-content h2 {
-        font-size: 30px;
+    font-size: 30px;
     font-weight: 700;
     font-family: 'Montserrat Bold', Arial, sans-serif;
 }
 
+.hero-content p {
+    margin: 20px 0 40px;
+}
+
 .hero-content .hero-botones {
-display: flex;
-justify-content: space-between;
-width: 345px;
-height: 50px;
-background: white;
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    height: 40px;
 }
 
 .hero-botones a {
+    position: relative;
     justify-content: center;
     align-items: center;
     display: inline-flex;
-    width: 250px;
+    width: 200px;
     height: 100%;
     background: white;
-    border: 2px solid #1466C2;
+    border: 2px solid white;
     border-radius: 50px;
     font-size: 16px;
     text-decoration: none;
     font-weight: 600px;
-    letter-spacing: 1px;
+}
 
+.hero-botones a:hover {
+background: #1466C2;
+color: white;
+border: 2px solid white;
 }
 
 main {
