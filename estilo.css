@@ -29,6 +29,7 @@
 }
 
 .header-container {
+    position: fixed;
     height: auto;
     width: 100%;
     background: white;
@@ -85,15 +86,19 @@
     font-family: 'Montserrat Bold', Arial, sans-serif;
     color: white;
     background: #1466C2;
-    border: #1466C2 1px solid;
+    border: #1466C2 2px solid;
     border-radius: 30px;
     transition: all 0.3s;
 }
 
 .header-container .botonera button:hover {
     background: white;
-    border: #1466C2 1px solid;
+    border: #1466C2 2px solid;
     color: #1466C2;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .hero {
@@ -112,14 +117,12 @@
 
 .hero-content h1 {
     font-size: 45px;
-    font-weight: 700;
     font-family: 'Montserrat Bold', Arial, sans-serif;
     line-height: 1.2;
 }
 
 .hero-content h2 {
     font-size: 30px;
-    font-weight: 700;
     font-family: 'Montserrat Bold', Arial, sans-serif;
 }
 
@@ -144,15 +147,235 @@
     background: white;
     border: 2px solid white;
     border-radius: 50px;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    color: #1466C2;
     font-size: 16px;
     text-decoration: none;
     font-weight: 600px;
 }
 
 .hero-botones a:hover {
-background: #1466C2;
-color: white;
-border: 2px solid white;
+    background: #1466C2;
+    color: white;
+    border: 2px solid white;
+}
+
+.sobre-mi {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10%;
+    margin: 4rem auto;
+}
+
+
+.sobre-mi h2 {
+    font-size: 30px;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    margin-bottom: 15px;
+}
+
+.proyectos-destacados {
+    /* Azul de fondo */
+    padding: 10px 10px 50px 10px;
+    text-align: center;
+}
+
+.titulo-proyectos {
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+}
+
+.grilla-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.herramientas h2 {
+    font-size: 30px;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10%;
+    margin: 4rem auto;
+    margin-bottom: 15px;
+}
+
+.proyecto-mediopelo,
+.proyecto-ale,
+.proyecto-ciber,
+.proyecto-advance {
+    background-color: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-mediopelo:hover,
+.proyecto-ale:hover,
+.proyecto-ciber:hover,
+.proyecto-advance:hover {
+    transform: translateY(-5px);
+}
+
+.imagen-mediopelo,
+.imagen-ale,
+.imagen-ciber,
+.imagen-advance {
+    width: 100%;
+    height: 200px;
+}
+
+.imagen-mediopelo img,
+.imagen-ale img,
+.imagen-ciber img,
+.imagen-advance img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mediopelo,
+.ale,
+.ciber,
+.advance {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.titulo-mediopelo,
+.titulo-ale,
+.titulo-ciber,
+.titulo-advance {
+    color: #1466C2;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.behance-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.behance-btn:hover {
+    transform: scale(1.1);
+}
+
+.behance-boton {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.experiencias {
+    padding: 40px 20px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.experiencias-titulo {
+    font-size: 30px;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10%;
+    margin: 4rem auto;
+    margin-bottom: 15px;
+}
+
+.linea-de-tiempo {
+    position: relative;
+    padding-left: 35px;
+}
+
+.linea-de-tiempo::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    bottom: 0;
+    left: 10px;
+    width: 4px;
+    background-color: #ffffff;
+}
+
+.item-epc,
+.item-tgi,
+.item-all-graph {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.item-epc::before,
+.item-tgi::before,
+.item-all-graph::before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #0d62c2;
+}
+
+.item-epc h3,
+.item-tgi h3,
+.item-all-graph h3 {
+    font-size: 1.1rem;
+    font-family: 'Montserrat Bold', Arial, sans-serif;
+    letter-spacing: 0.5px;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+}
+
+.puesto,
+.anio {
+    font-size: 0.85rem;
+    margin: 2px 0;
+    letter-spacing: 0.3px;
+}
+
+.experiencias ul {
+    list-style-type: disc;
+    padding-left: 18px;
+    margin-top: 10px;
+}
+
+.experiencias li {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.tira-herramientas img {
+    max-width: 100%;
+    height: auto;
 }
 
 main {
@@ -161,8 +384,45 @@ main {
     font-family: 'Montserrat Regular', Arial, sans-serif;
 }
 
-footer {
-    background-color: white;
-    color: #1466C2;
+.pie-de-pagina {
+    background-color: #2b2b2b;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacto-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.contacto-footer .email,
+.contacto-footer .telefono {
+    color: #ffffff;
+    text-decoration: none;
     font-family: 'Montserrat Regular', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.icono-red {
+  width: 32px;
+  height: 32px;
+  display: block;
 }
