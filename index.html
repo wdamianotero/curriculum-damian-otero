@@ -49,79 +49,79 @@
             </p>
         </section>
 
-        <section id="p-d" class="proyectos-destacados">
+        <section id="p-d" class="proyectos-destacados"> <!--cuál es el sentido semántico de ese id? los nombres que se proporcionen tienen que ser descriptivos de lo que hay dentro, y no tiene sentido que los ids y class tengan los mismos nombres dentro de la misma etiqueta, por qué lo hiciste? cuál es el fin♠-->
             <h2 class="titulo-proyectos">Proyectos destacados</h2>
-            <div class="grilla-proyectos">
+            <div class="grilla-proyectos"> <!--grid? en clases hablamos espegíficamente de que no se puede usar grid en esta instancia del trabajo y que si lo usaban íbamos a desconfiar de que estén siendo honestos con la creación propia del código y no asistido por alguna ia-->
                 <article class="proyecto-mediopelo">
                     <div class="imagen-mediopelo">
-                        <img src="img/proyecto-medio-pelo.png" alt="Barbería Medio Pelo">
+                        <img src="img/proyecto-medio-pelo.png" alt="Barbería Medio Pelo"> <!--faltan medidas de imagen-->
                     </div>
                     <div class="mediopelo">
                         <h3 class="titulo-mediopelo">Barbería Medio Pelo</h3>
-                        <a href="#" class="behance-btn" target="_blank">
-                            <img src="img/boton-behance-proyectos.png" alt="" class="behance-boton">
+                        <a href="#" class="behance-btn" target="_blank"> <!--por qué todavía no dejaste los links a los trabajos si en behance están?-->
+                            <img src="img/boton-behance-proyectos.png" alt="" class="behance-boton"> <!--falta el al y medidas-->
                         </a>
                     </div>
                 </article>
 
-                <article class="proyecto-ale">
-                    <div class="imagen-ale">
-                        <img src="img/proyecto-ale.png" alt="Panaderia Ale">
+                <article class="proyecto-ale"> <!--en clases vimos una etiqueta mejor para agrupar imágenes con su propio contenido, cambiala-->
+                    <div class="imagen-ale"> <!--por qué creas un div que contenga una sola imagen? es realmente necesaria♠-->
+                        <img src="img/proyecto-ale.png" alt="Panaderia Ale"> <!--faltan medidas-->
                     </div>
                     <div class="ale">
                         <h3 class="titulo-ale">Panadería Alé</h3>
                         <a href="#" class="behance-btn" target="_blank">
-                            <img src="img/boton-behance-proyectos.png" alt="" class="behance-boton">
+                            <img src="img/boton-behance-proyectos.png" alt="" class="behance-boton"> <!--falta alt y medidas-->
                         </a>
                     </div>
                 </article>
 
                 <article class="proyecto-ciber">
                     <div class="imagen-ciber">
-                        <img src="img/proyecto-ciber.png" alt="Museo del Ciber">
+                        <img src="img/proyecto-ciber.png" alt="Museo del Ciber"> <!--faltan medidas-->
                     </div>
                     <div class="ciber">
                         <h3 class="titulo-ciber">Micro Museo del Ciber</h3>
-                        <a href="#" class="behance-btn" target="_blank"">
-                        <img src=" img/boton-behance-proyectos.png" alt="" class="behance-boton">
+                        <a href="#" class="behance-btn" target="_blank""> <!--y esa comilla volando de dónde salió-->
+                        <img src=" img/boton-behance-proyectos.png" alt="" class="behance-boton"> <!--faltan medidas-->
                         </a>
                     </div>
                 </article>
 
                 <article class="proyecto-advance">
                     <div class="imagen-advance">
-                        <img src="img/proyecto-advance-coworking.png" alt="Advance Coworking">
+                        <img src="img/proyecto-advance-coworking.png" alt="Advance Coworking"> <!--faltan medidas-->
                     </div>
                     <div class="advance">
                         <h3 class="titulo-advance">Advance Coworking</h3>
                         <a href="#" class="behance-btn" target="_blank">
-                            <img src="img/boton-behance-proyectos.png" alt="" class="behance-boton">
+                            <img src="img/boton-behance-proyectos.png" alt="" class="behance-boton"> <!--falta alt-->
                         </a>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section id="e" class="experiencias">
+        <section id="e" class="experiencias"> <!--mismo problema que la section anterior, además, cuál es el sentido de utilizar una class única que jamás se va a volver a repetir siendo que no vas a volver a reutilizarla?-->
             <h2 class="experiencias-titulo">Experiencias</h2>
 
             <div class="linea-de-tiempo">
 
-                <article class="item-epc">
+                <article class="item-epc"> <!--es redundante ponerle una class a un article que puede ser otra etiqueta, ya existe una etiqueta semánticamente llamada item, eso ya te dice un montón de lo que podés arreglar-->
                     <h3>EDUCACIÓN PARA COMPARTIR</h3>
                     <p class="puesto">DISEÑADOR GRÁFICO · CDMX, MÉXICO</p>
                     <p class="anio">2022 — 2026</p>
                     <ul>
-                        <li><b>Branding:</b> Identidades visuales y materiales institucionales.</li>
+                        <li><b>Branding:</b> Identidades visuales y materiales institucionales.</li> <!--en clases hablamos de estas etiquetas "de diseño" que no deben utilizar porque quedaron obsoletas y se pueden solucionar desde css-->
                         <li><b>Editorial:</b> Informes, manuales, guías y publicaciones.</li>
                         <li><b>Digital:</b> Redes sociales, infografías, banners, motion graphics.</li>
                         <li><b>Audiovisual:</b> Fotografía, edición y contenido para eventos y redes.</li>
                     </ul>
                 </article>
 
-                <article class="item-tgi">
+                <article class="item-tgi"> 
                     <h3>TGI PACK</h3>
-                    <p class="puesto">ANALISTA DE PRESUPUESTOS & DESARROLLADOR DE PRODUCTO</p>
+                    <p class="puesto">ANALISTA DE PRESUPUESTOS & DESARROLLADOR DE PRODUCTO</p> 
                     <p class="anio">2013 — 2021</p>
                     <ul>
                         <li><b>Presupuestos:</b> Desarrollo de presupuestos y análisis de factibilidad para proyectos de
@@ -160,9 +160,9 @@
         </section>
     </main>
 
-    <footer class="pie-de-pagina">
+    <footer class="pie-de-pagina"> <!--es totalmente redundante poner de nombre una class que se llame exactamente que la misma etiqueta semántica, para eso están las etiquetas, para entenderlos-->
         <div class="contacto-footer">
-            <a href="mailto:wdamian.otero@gmail.com" class="email">wdamian.otero@gmail.com</a>
+            <a href="mailto:wdamian.otero@gmail.com" class="email">wdamian.otero@gmail.com</a> 
             <a href="https://wa.me/5491154740721" class="telefono" target="_blank">+ 54 9 11 54 74 07 21</a>
 
             <div class="redes-sociales">
