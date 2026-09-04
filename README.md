@@ -18,6 +18,7 @@ Visual Studio Code (VS Code)
 https://www.figma.com/design/en7vgZE5pXhDXBCJVAwO2j/landing-page-cv-damian-otero?node-id=0-1&t=gjGRjArSc9p9vLDC-1
 
 ## Cosas que no pude avanzar / hacer
-Teniendo en cuenta la  primer corrección, decidí no avanzar con secciones específicas. Omití y quité la parte de Proyectos Destacados. Estuve probando con tutoriales que lograron que hasta tenga
+Teniendo en cuenta la  primer corrección, decidí no avanzar con secciones específicas. Omití y quité la parte de Proyectos Destacados. Estuve probando con tutoriales que lograron que hasta tenga animaciones pero teniendo en cuenta que no se vio ese contenido, decidí omitir e ir con secciones más simples. 
+Me había entusiasmado porque sentía que tenía potencial, pero entiendo la idea de ir al ritmo de la cursada.
 
 
