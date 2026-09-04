@@ -1,26 +1,30 @@
 /* CSS DOCUMENT */
 @charset "utf-8";
 
+/*configuraciones generales*/
+
 @font-face {
-    font-family: Montserrat Regular;
-    src: url(fonts/Montserrat-Regular.ttf) format(opentype);
-    font-weight: normal;
+    font-family: Rubik-titulos;
+    src: url(fonts/Rubik-VariableFont_wght.ttf) format(opentype);
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: Montserrat Bold;
-    src: url(fonts/Montserrat-Bold.ttf) format(opentype);
-    font-weight: bold;
+    font-family: Overpass;
+    src: url(fonts/Overpass-VariableFont_wght.ttf) format(opentype);
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: Monterrat Italic;
-    src: url(fonts/Montserrat-Italic.ttf) format(opentype);
-    font-weight: italic;
+    font-family: Overpass-destacados;
+    src: url(fonts/Overpass-VariableFont_wght.ttf) format(opentype);
+    font-weight: 700;
     font-style: normal;
 }
+
+/*configuración de aplicaciones*/
 
 * {
     margin: 0;
@@ -28,77 +32,60 @@
     box-sizing: border-box;
 }
 
-.header-container {
+header {
     position: fixed;
-    height: auto;
+    top: 0%;
+    left: 0%;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: white;
-    font-size: 1em;
-    font-family: 'Montserrat Regular', Arial, sans-serif;
+    padding: 15px 5%;
 }
 
-.header-container .botonera {
+.logo-landing {
+    width: 113px;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 10%;
+    justify-content: center;
 }
 
-.header-container .botonera .logo-landing img {
-    width: 8em;
-    padding: 1em;
-    cursor: pointer;
-}
-
-.header-container .botonera ul {
+.botonera ul {
     display: flex;
+    gap: 10%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-.header-container .botonera ul li {
-    list-style: none;
-    padding: 0 20px;
-}
+/* La sección "sobre mi" quedaba en dos renglones pero encontré que la función "white-space" evita eso ¿Se puede usar? */
 
-.header-container .botonera ul li a {
-    color: #1466C2;
+.botonera a {
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    color: #0d62c2;
+    font-weight: 400;
+    font-size: 1.2rem;
     text-decoration: none;
-    position: relative;
+    white-space: nowrap;
 }
 
-.header-container .botonera ul li a::after {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 0.5px;
-    background: #1466C2;
-    transition: widht 0.3s ease-in-out;
+.botonera li a:hover {
+    text-decoration: underline;
 }
 
-.header-container .botonera ul li a:hover::after {
-    width: 100%;
-}
-
-.header-container .botonera button {
-    cursor: pointer;
-    padding: 10px 20px;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
+.hablemos {
+    background-color: #1466C2;
     color: white;
-    background: #1466C2;
-    border: #1466C2 2px solid;
+    padding: 10px 24px;
     border-radius: 30px;
-    transition: all 0.3s;
-}
-
-.header-container .botonera button:hover {
-    background: white;
-    border: #1466C2 2px solid;
-    color: #1466C2;
-}
-
-html {
-    scroll-behavior: smooth;
+    border: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
+    text-decoration: none;
 }
 
 .hero {
@@ -116,176 +103,65 @@ html {
 }
 
 .hero-content h1 {
-    font-size: 45px;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
+    font-size: 3.0rem;
+    font-weight: 700;
+    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
     line-height: 1.2;
 }
 
 .hero-content h2 {
-    font-size: 30px;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
+    font-size: 2.3rem;
+    font-weight: 700;
+    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
 }
 
 .hero-content p {
     margin: 20px 0 40px;
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .hero-content .hero-botones {
     display: flex;
     gap: 20px;
-    width: fit-content;
-    height: 40px;
 }
 
 .hero-botones a {
     position: relative;
+    display: +flex;
     justify-content: center;
     align-items: center;
-    display: inline-flex;
-    width: 200px;
-    height: 100%;
-    background: white;
-    border: 2px solid white;
-    border-radius: 50px;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
-    color: #1466C2;
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: 600px;
-}
-
-.hero-botones a:hover {
-    background: #1466C2;
-    color: white;
-    border: 2px solid white;
-}
-
-.sobre-mi {
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    flex-direction: column;
     text-align: center;
-    padding: 20px 10%;
-    margin: 4rem auto;
+    width: 250px;
+    padding: 12px 20px;
+    background: white;
+    border-radius: 50px;
+    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
+    color: #1466C2;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: 700;
 }
-
 
 .sobre-mi h2 {
-    font-size: 30px;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
+    font-size: 2.3rem;
+    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
     margin-bottom: 15px;
 }
 
-.proyectos-destacados {
-    padding: 10px 10px 50px 10px;
-    text-align: center;
-}
-
-.titulo-proyectos {
-    font-size: 30px;
-    margin-bottom: 40px;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
-}
-
-.grilla-proyectos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.herramientas h2 {
-    font-size: 30px;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
+.sobre-mi p {
     display: flex;
     align-items: center;
-    gap: 0.7rem;
     flex-direction: column;
     text-align: center;
     padding: 20px 10%;
-    margin: 4rem auto;
-    margin-bottom: 15px;
-}
-
-.proyecto-mediopelo,
-.proyecto-ale,
-.proyecto-ciber,
-.proyecto-advance {
-    background-color: #ffffff;
-    border-radius: 24px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
-}
-
-.proyecto-mediopelo:hover,
-.proyecto-ale:hover,
-.proyecto-ciber:hover,
-.proyecto-advance:hover {
-    transform: translateY(-5px);
-}
-
-.imagen-mediopelo,
-.imagen-ale,
-.imagen-ciber,
-.imagen-advance {
-    width: 100%;
-    height: 200px;
-}
-
-.imagen-mediopelo img,
-.imagen-ale img,
-.imagen-ciber img,
-.imagen-advance img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.mediopelo,
-.ale,
-.ciber,
-.advance {
-    padding: 24px 16px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.titulo-mediopelo,
-.titulo-ale,
-.titulo-ciber,
-.titulo-advance {
-    color: #1466C2;
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.behance-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    text-decoration: none;
-    transition: transform 0.2s ease;
-}
-
-.behance-btn:hover {
-    transform: scale(1.1);
-}
-
-.behance-boton {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
 }
 
 .experiencias {
@@ -294,98 +170,79 @@ html {
     margin: 0 auto;
 }
 
-.experiencias-titulo {
-    font-size: 30px;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
+.experiencias h2 {
+    font-size: 2.3rem;
+    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
-    gap: 0.7rem;
     flex-direction: column;
     text-align: center;
-    padding: 20px 10%;
-    margin: 4rem auto;
     margin-bottom: 15px;
 }
 
-.linea-de-tiempo {
-    position: relative;
-    padding-left: 35px;
-}
-
-.linea-de-tiempo::before {
-    content: '';
-    position: absolute;
-    top: 8px;
-    bottom: 0;
-    left: 10px;
-    width: 4px;
-    background-color: #ffffff;
-}
-
-.item-epc,
-.item-tgi,
-.item-all-graph {
-    position: relative;
+.experiencias article {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 35px;
 }
 
-.item-epc::before,
-.item-tgi::before,
-.item-all-graph::before {
-    content: '';
-    position: absolute;
-    left: -35px;
-    top: 2px;
-    width: 22px;
-    height: 22px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    box-shadow: 0 0 0 2px #0d62c2;
-}
-
-.item-epc h3,
-.item-tgi h3,
-.item-all-graph h3 {
-    font-size: 1.1rem;
-    font-family: 'Montserrat Bold', Arial, sans-serif;
-    letter-spacing: 0.5px;
-    margin: 0 0 4px 0;
+.experiencias h3 {
+    font-size: 1.4rem;
+    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 
 .puesto,
 .anio {
-    font-size: 0.85rem;
-    margin: 2px 0;
-    letter-spacing: 0.3px;
+    font-size: 1.3rem;
+    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 
 .experiencias ul {
-    list-style-type: disc;
     padding-left: 18px;
     margin-top: 10px;
 }
 
 .experiencias li {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
     margin-bottom: 6px;
 }
 
-.tira-herramientas img {
-    max-width: 100%;
-    height: auto;
+.herramientas h2 {
+    font-size: 2.3rem;
+    font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.herramientas ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 40px;
+}
+
+.herramientas li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 main {
     background-color: #1466C2;
     color: white;
-    font-family: 'Montserrat Regular', Arial, sans-serif;
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
 }
 
-.pie-de-pagina {
+footer {
     background-color: #2b2b2b;
-    padding: 40px 20px;
+    padding: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,26 +259,19 @@ main {
 .contacto-footer .telefono {
     color: #ffffff;
     text-decoration: none;
-    font-family: 'Montserrat Regular', Arial, sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: opacity 0.2s ease;
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.contacto-footer a:hover {
+    text-decoration: underline;
 }
 
 .redes-sociales {
-  display: flex;
-  gap: 12px;
-  margin-top: 4px;
-}
-
-.redes-sociales a {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.icono-red {
-  width: 32px;
-  height: 32px;
-  display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
 }
