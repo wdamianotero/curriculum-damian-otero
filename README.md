@@ -12,7 +12,7 @@ En este proyecto se desarrolló la maquetación de una landing page que funciona
 Visual Studio Code (VS Code)
 
 ## Resolución / Tamaño de Pantalla de Desarrollo 
-1920 x 1080 px
+1536 x 695.20 px
 
 ## Link a Figma
 https://www.figma.com/design/en7vgZE5pXhDXBCJVAwO2j/landing-page-cv-damian-otero?node-id=0-1&t=gjGRjArSc9p9vLDC-1
