@@ -5,21 +5,21 @@
 
 @font-face {
     font-family: Rubik-titulos;
-    src: url(fonts/Rubik-VariableFont_wght.ttf) format(opentype);
+    src: url(fonts/Rubik-VariableFont_wght.ttf) format(opentype); /*ojo que pusiste que el formato sea opentype y no es, fijate la extención del archivo*/
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: Overpass;
-    src: url(fonts/Overpass-VariableFont_wght.ttf) format(opentype);
+    src: url(fonts/Overpass-VariableFont_wght.ttf) format(opentype); /*idem*/
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: Overpass-destacados;
-    src: url(fonts/Overpass-VariableFont_wght.ttf) format(opentype);
+    src: url(fonts/Overpass-VariableFont_wght.ttf) format(opentype); /*idem*/
     font-weight: 700;
     font-style: normal;
 }
@@ -30,6 +30,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*te va a convenir tener seteado acá la tipografía de texto de lectura acá así no tenés que cambiar en todos los elementos la font-family, sólo en los títulos o destacados*/
 }
 
 header {
@@ -45,7 +46,7 @@ header {
 }
 
 .logo-landing {
-    width: 113px;
+    width: 113px; /*los tamaños de las imágenes se resuelven desde html, si tenés que cambiar el tamaño te conviene cambiar directamente el tamaño del archivo, además tiene que ser del mismo tamaño que se muestra*/
     height: auto;
     display: flex;
     align-items: center;
@@ -54,14 +55,15 @@ header {
 
 .botonera ul {
     display: flex;
-    gap: 10%;
+    gap: 10%; /*el gap en porcentajes suele traer problemas, en este momento está haciendo que el tamaño de la caja no se calcule bien, si lo inspeccionás te aparece más pequeño el tamaño de la caja de lo que debería ser, utilizá px mejor*/
     align-items: center;
-    margin: 0;
+    margin: 0; /*no repitas! ya declaraste margin/padding en el selector univercal*/
     padding: 0;
     list-style-type: none;
 }
 
-/* La sección "sobre mi" quedaba en dos renglones pero encontré que la función "white-space" evita eso ¿Se puede usar? */
+/* La sección "sobre mi" quedaba en dos renglones pero encontré que la función "white-space" evita eso ¿Se puede usar?*/
+ /*está bien!*/
 
 .botonera a {
     font-family: 'Overpass', Arial, Helvetica, sans-serif;
@@ -91,10 +93,10 @@ header {
 .hero {
     height: 100vh;
     background: url('img/hero-fondo.png') no-repeat;
-    background-size: cover;
+    background-size: cover; /*este tamaño no funciona bien en tamaños de pantalla grandes, es mejor contain, en la devolución escrita está la referencia del por qué*/
     background-position: center;
     display: flex;
-    align-items: center;
+    align-items: center; /*esto no produce cambios*/
     padding: 0 10%;
 }
 
@@ -128,8 +130,8 @@ header {
 }
 
 .hero-botones a {
-    position: relative;
-    display: +flex;
+    position: relative; /*todavía no es momento de utilizar position*/
+    display: +flex; /*así no se escribe!*/
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -155,7 +157,7 @@ header {
 }
 
 .sobre-mi p {
-    display: flex;
+    display: flex; /*no te olvides de sacar el flex a los textos también además de a las h*/
     align-items: center;
     flex-direction: column;
     text-align: center;
