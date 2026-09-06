@@ -129,7 +129,7 @@ header {
 
 .hero-botones a {
     position: relative;
-    display: +flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -147,9 +147,6 @@ header {
 .sobre-mi h2 {
     font-size: 2.3rem;
     font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
     margin-bottom: 15px;
 }
@@ -173,11 +170,14 @@ header {
 .experiencias h2 {
     font-size: 2.3rem;
     font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    font-weight: 700;
     text-align: center;
     margin-bottom: 15px;
+}
+
+span {
+    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 
 .experiencias article {
@@ -213,11 +213,9 @@ header {
 .herramientas h2 {
     font-size: 2.3rem;
     font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
+    font-weight: 700;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 15px;
+    gap: 15px;
 }
 
 .herramientas ul {
