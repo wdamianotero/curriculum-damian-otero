@@ -19,6 +19,7 @@ https://www.figma.com/design/en7vgZE5pXhDXBCJVAwO2j/landing-page-cv-damian-otero
 
 ## Cosas que no pude avanzar / hacer
 Teniendo en cuenta la  primer corrección, decidí no avanzar con secciones específicas. Omití y quité la parte de Proyectos Destacados. Estuve probando con tutoriales que lograron que hasta tenga animaciones pero teniendo en cuenta que no se vio ese contenido, decidí omitir e ir con secciones más simples. 
-Me había entusiasmado porque sentía que tenía potencial, pero entiendo la idea de ir al ritmo de la cursada. Tuve algunas complicacoines con algunas secciones como la de las experiencias que revisitando los videos del campus pude resolverlo. No pude por tiempo realizar un botón que dirija hacia abajo de la landing tal como indicó Aimé en la corrección de la preentrega, pero sí pude ubicar la sección sobre mi más arriba a tal punto de que se note que hay más contenido par ver y que no es solo el Hero.
+Tuve algunas complicaciones con algunas secciones como la de las experiencias que revisitando los videos del campus pude resolverlo.
+No pude por tiempo realizar un botón que dirija hacia abajo de la landing desde el hero tal como indicó Aimé en la corrección de la preentrega, pero sí pude ubicar la sección más arriba a tal punto de que se note que hay más contenido para ver.
 
 
