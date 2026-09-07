@@ -84,6 +84,10 @@ header {
     text-decoration: none;
 }
 
+section[id] {
+    scroll-margin-top: 80px;
+}
+
 .hero {
     height: 80vh;
     /*En base al comentario que pusiste que pareciera que la página termina en el hero, tomé la decision de achicar el hero, pero voy a tener en cuenta para seguir desarrollando esta landing y crear en el futuro un botón*/
@@ -241,6 +245,7 @@ main {
     background-color: #1466C2;
     color: white;
     padding-top: 50px;
+    /*Agregué padding-top, porque la barra blanca del nav me cortaba la cabeza de la foto*/
 }
 
 footer {
