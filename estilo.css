@@ -5,21 +5,21 @@
 
 @font-face {
     font-family: Rubik-titulos;
-    src: url(fonts/Rubik-VariableFont_wght.ttf) format(opentype); /*ojo que pusiste que el formato sea opentype y no es, fijate la extención del archivo*/
+    src: url(fonts/Rubik-VariableFont_wght.ttf) format(truetype);
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: Overpass;
-    src: url(fonts/Overpass-VariableFont_wght.ttf) format(opentype); /*idem*/
+    src: url(fonts/Overpass-VariableFont_wght.ttf) format(truetype);
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: Overpass-destacados;
-    src: url(fonts/Overpass-VariableFont_wght.ttf) format(opentype); /*idem*/
+    src: url(fonts/Overpass-VariableFont_wght.ttf) format(truetype);
     font-weight: 700;
     font-style: normal;
 }
@@ -30,24 +30,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /*te va a convenir tener seteado acá la tipografía de texto de lectura acá así no tenés que cambiar en todos los elementos la font-family, sólo en los títulos o destacados*/
+    font-family: 'Overpass', Arial, Helvetica, sans-serif;
 }
 
 header {
     position: fixed;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: white;
     padding: 15px 5%;
+    z-index: 1000;
+    /*Estuve viendo el link que me pasaste para z-index y sumado a lo que encontré en internet, recomiendan poner un número alto entre 1000 a 9999 para garantizar que ningún elemento lo tape al hacer scroll*/
 }
 
 .logo-landing {
-    width: 113px; /*los tamaños de las imágenes se resuelven desde html, si tenés que cambiar el tamaño te conviene cambiar directamente el tamaño del archivo, además tiene que ser del mismo tamaño que se muestra*/
-    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,18 +55,12 @@ header {
 
 .botonera ul {
     display: flex;
-    gap: 10%; /*el gap en porcentajes suele traer problemas, en este momento está haciendo que el tamaño de la caja no se calcule bien, si lo inspeccionás te aparece más pequeño el tamaño de la caja de lo que debería ser, utilizá px mejor*/
+    gap: 25px;
     align-items: center;
-    margin: 0; /*no repitas! ya declaraste margin/padding en el selector univercal*/
-    padding: 0;
     list-style-type: none;
 }
 
-/* La sección "sobre mi" quedaba en dos renglones pero encontré que la función "white-space" evita eso ¿Se puede usar?*/
- /*está bien!*/
-
 .botonera a {
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
     color: #0d62c2;
     font-weight: 400;
     font-size: 1.2rem;
@@ -91,13 +85,17 @@ header {
 }
 
 .hero {
-    height: 100vh;
+    height: 80vh;
+    /*En base al comentario que pusiste que pareciera que la página termina en el hero, tomé la decision de achicar el hero, pero voy a tener en cuenta para seguir desarrollando esta landing y crear en el futuro un botón*/
+    max-height: 750px;
     background: url('img/hero-fondo.png') no-repeat;
-    background-size: cover; /*este tamaño no funciona bien en tamaños de pantalla grandes, es mejor contain, en la devolución escrita está la referencia del por qué*/
+    background-size: contain;
     background-position: center;
     display: flex;
-    align-items: center; /*esto no produce cambios*/
+    align-items: center;
+    /*esto no produce cambios*/
     padding: 0 10%;
+    /*acá decidí no sacar el align-center y padding porque si los borro, sí me produce cambios en la web y no encuentro la solución para que no suceda. Dejo tu comentario de referencia*/
 }
 
 .hero-content {
@@ -119,7 +117,6 @@ header {
 
 .hero-content p {
     margin: 20px 0 40px;
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
 }
@@ -130,13 +127,9 @@ header {
 }
 
 .hero-botones a {
-    position: relative; /*todavía no es momento de utilizar position*/
-    display: flex; /*así no se escribe!*/
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     width: 250px;
     padding: 12px 20px;
+    text-align: center;
     background: white;
     border-radius: 50px;
     font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
@@ -154,18 +147,18 @@ header {
 }
 
 .sobre-mi p {
-    display: flex; /*no te olvides de sacar el flex a los textos también además de a las h*/
-    align-items: center;
-    flex-direction: column;
     text-align: center;
-    padding: 20px 10%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-wrap: balance;
     font-family: 'Overpass', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
+    /*Agregué max-width al párrafo para que no se vea tan ancho. Vi en varios hilos de reddit que la mayoría recomienda ese valor (700px). También me quedaron unas viudas, pero no pude ajustarlas con el text-wrap. La opción "pretty" no me la reconoce tampoco*/
 }
 
 .experiencias {
     padding: 40px 20px;
-    max-width: 650px;
+    max-width: 1100px; /*Agrandé el max-widht de 650 a 1100px para que entren dos columnas*/
     margin: 0 auto;
 }
 
@@ -177,21 +170,31 @@ header {
     margin-bottom: 15px;
 }
 
-span {
-    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
-    font-weight: 700;
+.experiencias-contenedor {
+    display:flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .experiencias article {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 35px;
+   flex-basis: 400px;
+   flex-grow: 0;
+   flex-shrink: 0;
+   margin: 30px;
+}
+/*Acá resolví como indicaste, revisitando los videos de flex-wrap, basis, grow y shrink. Fue tocando un poco y creo que e resultado quedó como el que realizaste de ejemplo*/
+
+span {
+    font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
+    font-weight: 700;
 }
 
 .experiencias h3 {
     font-size: 1.4rem;
     font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .puesto,
@@ -199,6 +202,7 @@ span {
     font-size: 1.3rem;
     font-family: 'Overpass-destacados', Arial, Helvetica, sans-serif;
     font-weight: 700;
+    text-align: center;
 }
 
 .experiencias ul {
@@ -207,7 +211,6 @@ span {
 }
 
 .experiencias li {
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     margin-bottom: 6px;
 }
@@ -216,12 +219,12 @@ span {
     font-size: 2.3rem;
     font-family: 'Rubik-titulos', Arial, Helvetica, sans-serif;
     font-weight: 700;
-    display: flex;
-    gap: 15px;
+    text-align: center;
 }
 
 .herramientas ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 60px;
@@ -237,7 +240,7 @@ span {
 main {
     background-color: #1466C2;
     color: white;
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
+    padding-top: 50px;
 }
 
 footer {
@@ -259,7 +262,6 @@ footer {
 .contacto-footer .telefono {
     color: #ffffff;
     text-decoration: none;
-    font-family: 'Overpass', Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     font-weight: 400;
 }
